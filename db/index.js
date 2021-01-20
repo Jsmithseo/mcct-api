@@ -1,5 +1,8 @@
-const config = require('../config/dev');
+const config = require('../config');
 const mongoose = require('mongoose');
+
+
+if( !mongoose.Types.ObjectId.isValid(id) ) return false;
 
 require('./models/portfolio');
 
