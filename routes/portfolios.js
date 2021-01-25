@@ -1,6 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const envVars = require("dotenv").config();
+
+if (envVars.error) {
+  throw envVars.error;
+}
+
 const { checkJwt } = require('../controllers/auth');
 const {
   getPortfolios,
